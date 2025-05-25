@@ -3,7 +3,7 @@ pkgdown: 2.1.3
 pkgdown_sha: ~
 articles:
   tabela-intro: tabela-intro.html
-last_built: 2025-05-25T19:41Z
+last_built: 2025-05-25T19:46Z
 urls:
   reference: https://deepbas.github.io/tabela/reference
   article: https://deepbas.github.io/tabela/articles

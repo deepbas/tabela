@@ -8,6 +8,8 @@ Authors@R:
     email="deepbas99@gmail.com",
     role=c("aut","cre"),
     comment = c(ORCID = "0009-0003-1075-7672"))
+URL: https://deepbas.github.io/tabela/
+BugReports: https://github.com/deepbas/tabela/issues/   
 Description: 
     Given a root URL, scrape all downloadable files and optionally any HTML tables. 
 License: MIT + file LICENSE
@@ -33,3 +35,4 @@ Imports:
     tibble,
     magrittr
 VignetteBuilder: knitr
+
