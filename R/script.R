@@ -22,14 +22,17 @@ get_all_links <- function(session) {
 #' Filter links by arbitrary extensions
 #'
 #' @param links Character vector of URLs.
-#' @param exts Character vector of file extensions (without dot), e.g. c("csv","txt").
+#' @param exts  Character vector of file extensions (without dot), e.g. c("csv","txt").
 #' @return Character vector of filtered URLs.
 #' @export
-filter_links_by_ext <- function(links, exts = c("csv","txt","xlsx","sav","por","RData")) {
-  links <- links[!is.na(links) & nzchar(links)]
-  pattern <- paste0("\\.(", paste(exts, collapse="|"), ")$", ignore.case = TRUE)
-  stringr::str_subset(links, pattern)
+filter_links_by_ext <- function(links,
+  exts = c("csv","txt","xlsx","sav","por","RData")) {
+links <- links[!is.na(links) & nzchar(links)]
+pattern <- paste0("\\.(", paste(exts, collapse="|"), ")$")
+stringr::str_subset(links, pattern)
 }
+
+
 
 #' Memoised extractor of file info for various types
 #'

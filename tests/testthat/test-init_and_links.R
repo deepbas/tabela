@@ -1,17 +1,18 @@
 # tests/testthat/test-init_and_links.R
 
 library(testthat)
-library(pkgname)   # replace pkgname with your package’s name
 
-test_that("init_session() returns a polite bow_session", {
+# ensure init_session returns the correct polite session class
+test_that("init_session() returns a polite session", {
   skip_on_cran()
   skip_if_not_installed("polite")
-  url <- "https://www.r-project.org"
+  url     <- "https://www.r-project.org"
   session <- init_session(url)
-  expect_s3_class(session, "bow_session")
+  expect_s3_class(session, "session")
   expect_equal(session$url, url)
 })
 
+# validate that get_all_links returns absolute URLs
 test_that("get_all_links() returns a character vector of URLs", {
   skip_on_cran()
   skip_if_not_installed("rvest")
@@ -19,10 +20,10 @@ test_that("get_all_links() returns a character vector of URLs", {
   session <- init_session(url)
   links   <- get_all_links(session)
   expect_type(links, "character")
-  # should be absolute URLs
   expect_true(all(grepl("^https?://", links)))
 })
 
+# confirm filter_links_by_ext filters only the specified extensions
 test_that("filter_links_by_ext() correctly filters by extension", {
   urls <- c(
     "https://foo.com/data.csv",
