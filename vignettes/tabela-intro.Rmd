@@ -1,5 +1,5 @@
 ---
-title: "tabela-intro"
+title: "Getting started with tabela"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{tabela-intro}
@@ -16,4 +16,55 @@ knitr::opts_chunk$set(
 
 ```{r setup}
 library(tabela)
+library(magrittr)
+```
+
+
+
+```{r}
+#  Define target URL
+url <- "https://en.wikipedia.org/wiki/2012_Summer_Olympics"
+```
+
+```{r}
+# Start a polite session
+session <- init_session(url)
+print(session$url)    
+```
+
+```{r}
+# Pull out every hyperlink on the page
+all_links <- get_all_links(session)
+length(all_links)    
+```
+
+
+```{r}
+# Filter down to, say, only CSV or TXT files
+file_links <- filter_links_by_ext(all_links, exts = c("csv","txt"))
+file_links           
+```
+
+```{r}
+# Get file metadata (rows, cols, etc.) for that batch
+if (length(file_links)) {
+  infos <- purrr::map(file_links, get_file_info)
+  files_df <- dplyr::bind_rows(infos)
+  print(files_df)
+} else {
+  message("No CSV/TXT links found on that page.")
+}
+```
+
+
+```{r}
+# If you want HTML tables instead…
+res <- scrape_page_data(
+  root_url   = url,
+  exts       = character(),   # skip file‐links
+  list_tables = TRUE
+)
+length(res$tables)    # how many <table> nodes did it find?
+# e.g. view second table:
+res$tables[[2]] 
 ```

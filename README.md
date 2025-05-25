@@ -1,6 +1,30 @@
-# Tabela
+# tabela <badge-and-version>
 
-  [![R-CMD-check](https://github.com/deepbas/my-r-project/actions/workflows/R-CMD-check.yaml/badge.svghttps://github.com/deepbas/my-r-project/actions/workflows/R-CMD-check.yaml/badge.svghttps://github.com/deepbas/my-r-project/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/deepbas/my-r-project/actions/workflows/R-CMD-check.yaml)
+_A fast, polite scraper for downloadable files & tables_  
+
+[![R-CMD-check](https://github.com/deepbas/tabela/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/deepbas/tabela/actions/workflows/R-CMD-check.yaml)  
+[![Codecov](https://codecov.io/gh/deepbas/tabela/branch/main/graph/badge.svg)](https://codecov.io/gh/deepbas/tabela)  
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)  
+
+## Installation
+
+```r
+# install from CRAN (when published)
+install.packages("tabela")
+
+# or the development version:
+remotes::install_github("deepbas/tabela")
+```
+
+## Quick example
 
 
-  [![Codecov test coverage](https://codecov.io/gh/deepbas/my-r-project/graph/badge.svg)](https://app.codecov.io/gh/deepbas/my-r-project)
+```r
+library(tabela)
+res <- scrape_page_data(
+  "https://en.wikipedia.org/wiki/2012_Summer_Olympics",
+  exts = c("csv"),
+  list_tables = TRUE
+)
+knitr::kable(res$tables[[2]] |> head())
+```

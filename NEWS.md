@@ -1,3 +1,3 @@
-# tabela 0.1.0
+## 0.1.0
 
-* Initial CRAN submission.
+* Initial release: polite sessions, link filtering, file-info, table scraping.

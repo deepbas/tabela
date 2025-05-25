@@ -1,4 +1,46 @@
-url: ~
-template:
-  bootstrap: 5
+# _pkgdown.yml
 
+url: https://deepbas.github.io/tabela
+bugreports: https://github.com/deepbas/tabela/issues
+
+template:
+  bootstrap: 5        # switch to Bootstrap 5
+  bootswatch: flatly
+
+home:
+  title: "tabela: Easy Web File & Table Scraping"
+  tagline: "Polite sessions + link filtering + file-info summaries"
+  intro: |
+    **tabela** provides a simple API for crawling any URL,
+    extracting downloadable file links (csv, txt, xlsx, sav, por, RData),
+    and optionally parsing all HTML tables into tibbles.
+  badges:
+    - r-cmd-check
+    - codecov
+    - lifecycle
+  features:
+    - title: Polite robots.txt sessions
+      description: Uses {polite} to respect crawling rules.
+    - title: Link extraction
+      description: Grabs every `<a href>` and makes them absolute.
+    - title: File inspection
+      description: Memoises and reports rows, cols, sheets, objects.
+    - title: Table scraping
+      description: Turns any `<table>` into an R data.frame.
+
+articles:
+  - title: "Guides & Tutorials"
+    contents:
+      - tabela-intro
+
+reference:
+  - title: "Function reference"
+    contents:
+      - init_session
+      - get_all_links
+      - filter_links_by_ext
+      - get_file_info
+      - scrape_page_data
+
+changelog:
+  title: "What’s new"
