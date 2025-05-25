@@ -26,7 +26,7 @@ scrape_page_data(
 \value{
 A list with elements:
 \itemize{
-\item $files: tibble of file info (name,url,type,rows,cols,…)
+\item $files: tibble of file info (name,url,type,rows,cols, ...)
 \item $tables (optional): list of HTML tables
 }
 }

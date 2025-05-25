@@ -3,8 +3,8 @@
 _A fast, polite scraper for downloadable files & tables_  
 
 [![R-CMD-check](https://github.com/deepbas/tabela/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/deepbas/tabela/actions/workflows/R-CMD-check.yaml)  
-[![Codecov](https://codecov.io/gh/deepbas/tabela/branch/main/graph/badge.svg)](https://codecov.io/gh/deepbas/tabela)  
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)  
+[![Codecov](https://app.codecov.io/gh/deepbas/tabela/branch/main/graph/badge.svg)](https://app.codecov.io/gh/deepbas/tabela)
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 
 ## Installation
 

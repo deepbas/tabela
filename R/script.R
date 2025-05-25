@@ -88,7 +88,7 @@ get_file_info <- memoise::memoise(function(url) {
 #' @param page_size Integer. Number of file-links per page. Default 10.
 #' @param list_tables Logical. If TRUE, also extract all HTML tables as data.frames.
 #' @return A list with elements:
-#'   * $files: tibble of file info (name,url,type,rows,cols,…)
+#'   * $files: tibble of file info (name,url,type,rows,cols, ...)
 #'   * $tables (optional): list of HTML tables
 #' @export
 scrape_page_data <- function(root_url,
@@ -117,8 +117,8 @@ scrape_page_data <- function(root_url,
     tbl_nodes <- rvest::html_elements(page_html, "table")
     tbls      <- purrr::map(tbl_nodes, ~ rvest::html_table(.x, fill = TRUE))
     result$tables <- tbls
-    cat(sprintf("Scraped page %d (%d–%d of %d files)\n", page, start, end, length(files)))
-    cat(sprintf("  → Found %d HTML tables on this page\n", length(tbls)))
+    cat(sprintf("Scraped page %d (%d-%d of %d files)\n", page, start, end, length(files)))
+    cat(sprintf("  -> Found %d HTML tables on this page\n", length(tbls)))
   }
 
   invisible(result)

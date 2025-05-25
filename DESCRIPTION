@@ -8,10 +8,8 @@ Authors@R:
     email="deepbas99@gmail.com",
     role=c("aut","cre"),
     comment = c(ORCID = "0009-0003-1075-7672"))
-Description:  
-    Given a root URL, scrape all downloadable files (csv, txt, xlsx, sav, por, RData)
-    and optionally any HTML tables.  Returns a tibble of file metadata (name, url,
-    rows, cols, etc.) and, if requested, a list of data.frames from table nodes.
+Description: 
+    Given a root URL, scrape all downloadable files and optionally any HTML tables. 
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -36,5 +34,8 @@ Imports:
     purrr,
     dplyr,
     tibble,
-    memoise
+    memoise,
+    magrittr
 VignetteBuilder: knitr
+URL:         https://deepbas.github.io/tabela
+BugReports:  https://github.com/deepbas/tabela/issues
