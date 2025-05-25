@@ -1,0 +1,14 @@
+Package: tabela
+Title:  Elaborate Tables Exixting On Websites
+Version: 0.1.0
+Authors@R: 
+  person(
+    "Deepak",
+    "Bastola",
+    email="deepbas99@gmail.com",
+    role=c("aut","cre"),
+    comment = c(ORCID = "0009-0003-1075-7672"))
+Description: Extract tables from a website
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
