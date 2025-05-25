@@ -28,14 +28,9 @@ Imports:
     rvest,
     xml2,
     stringr,
-    readr,
-    readxl,
-    foreign,
     purrr,
     dplyr,
     tibble,
-    memoise,
     magrittr
 VignetteBuilder: knitr
-URL:         https://deepbas.github.io/tabela
-BugReports:  https://github.com/deepbas/tabela/issues
+
