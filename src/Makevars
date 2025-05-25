@@ -1,5 +1,5 @@
 ## src/Makevars
-CXXFLAGS   = -Wall -pedantic
+PKG_CXXFLAGS = -Wall -pedantic
 CXX11FLAGS = $(CXXFLAGS)
 CXX14FLAGS = $(CXXFLAGS)
 CXX17FLAGS = $(CXXFLAGS)
