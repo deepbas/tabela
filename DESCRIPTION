@@ -1,5 +1,5 @@
 Package: tabela
-Title:  Elaborate Tables Exixting On Websites
+Title: Elaborate Tables Exixting On Websites
 Version: 0.1.0
 Authors@R: 
   person(
@@ -12,3 +12,15 @@ Description: Extract tables from a website
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+LinkingTo: 
+    Rcpp
+Imports: 
+    Rcpp
+VignetteBuilder: knitr
